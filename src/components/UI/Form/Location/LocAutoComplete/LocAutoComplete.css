@@ -1,0 +1,9 @@
+.GoogleComplete {
+    width: 100%;
+    padding-left: 5px;
+ }
+
+ .Input {
+    box-shadow: none !important;
+    min-width: 210px;
+}

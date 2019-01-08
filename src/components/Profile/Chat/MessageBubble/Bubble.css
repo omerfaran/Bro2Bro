@@ -1,0 +1,102 @@
+.Body {
+    background-color: #ffffff;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.LeftBubble > p,
+.RightBubble > p {
+    /* display: inline-block; */
+    position: relative;
+    color: #ffffff;
+    padding: 7px;
+    margin-top: 8px; /* was 5 px */
+    border-radius: 5x;
+}
+
+.LeftBubble > p {
+    
+}
+
+/* .LeftBubble > div p {
+    word-wrap: break-word;
+    margin:0;
+    max-width: 100%;
+} */
+
+.RightBubble > p {
+    background-color: #0984e3;
+    margin-right: 10px;
+    margin-left: 10px;
+    float: right;
+}
+
+.RightBubble {
+    overflow: hidden;
+    margin-bottom:0.625em;
+    padding-left: 0.5rem;
+}
+
+.LeftBubble {
+    overflow: hidden;
+    margin-bottom:0.625em;
+    padding-right: 0.5rem;
+}
+
+.LeftBubble p {
+    float:left;
+	/* padding:0.5em; */
+	/* margin:0; */
+	max-width:100%;
+    background: #d63030;
+    color: #ffffff;
+    word-wrap:break-word;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.LeftBubble > p::after {
+    content:'';
+    width: 0; 
+    height: 0; 
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent; 
+    border-right:8px solid #d63030;
+    position: absolute;
+    left: -5px;
+    bottom: 5px;
+}
+
+.RightBubble > p::after {
+    content:'';
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    
+    border-left: 10px solid #0984e3;
+    position: absolute;
+    right: -5px;
+    bottom: 5px;
+}
+
+.RequestBubble {
+    text-align: left;
+}
+
+.RequestBubble > div {
+    background-color: #0984e3;
+    margin-left: 10px;
+    display: inline-block;
+    position: relative;
+    color: #ffffff;
+    padding: 7px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-style: italic;
+    border-radius: 5x;
+}

@@ -1,0 +1,92 @@
+.Match:hover {
+    text-decoration: none;
+}
+
+.Sidebar {
+  float: left;
+  min-height: 100vh;
+  margin-top: 4.75rem; /* SEEMS LIKE IT MUST BE DONE MANUALLY RIGHT? */
+  position: absolute;
+}
+
+.Board {
+  position: relative; 
+left: 100px;  
+}
+
+
+@media screen and (max-width: 1388px) {
+ .Board {
+   width: 75%;
+ }
+} 
+
+@media screen and (max-width: 1140px) {
+  .Board {
+    width: 65%;
+  }
+ } 
+
+ @media screen and (max-width: 900px) {
+  .Board {
+    width: 60%;
+  }
+}
+
+  @media screen and (max-width: 725px) {
+    .Board {
+      width: 50%;
+      text-align: center;
+      left: 120px;
+    }
+ } 
+
+@media screen and (max-width: 615px) {
+  .Sidebar {
+    float: none;
+    position: static;
+  }
+  .Board {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: static;
+  }
+} 
+
+/* @media screen and (max-width: 510px) {
+  .Board {
+    width: 40%;
+  }
+}  */
+
+
+.FilterButton {
+  background-color:#d63031;
+  outline-color: #d63031;
+  border-color: #d63031;
+  border-radius: 5%;
+  z-index: 10;
+  margin-left: 10px;
+}
+
+.FilterButton:hover {
+  background-color: #cc2c2c;
+  border-color:  #cc2c2c;
+}
+
+.enter {
+    transform: translateY(-100%);
+    transition: 2.3s cubic-bezier(0, 1, 0.5, 1);
+  }
+  .enterActive {
+    transform: translateY(0%);
+  }
+  
+  .leave {
+    transform: translateY(0%);
+    transition: 2.3s ease-in-out;
+  }
+  .leaveActive {
+    transform: translateY(-100%);
+  }

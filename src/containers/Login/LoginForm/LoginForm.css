@@ -1,0 +1,28 @@
+
+.Card {
+    background-color: #e74c3c;
+    border-radius: 5px;
+    opacity: 0.90;
+    font-weight: 700;
+    text-shadow: .2px .1px;
+    font-size: 18px;
+    
+}
+
+.CardHeader {
+    background-color: #f7f3f3;
+}
+
+.InputGrid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: 100px;
+    grid-auto-columns: 100px; 
+}
+
+@media screen and (max-width: 600px) {
+    .InputGrid {
+        grid-template-columns: auto;
+        
+    }
+} 

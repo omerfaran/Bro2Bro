@@ -1,0 +1,47 @@
+.ChatContainer {
+    /* height: 100%;
+    width: 100%; */
+    /* position: relative; */
+
+}
+
+.ProfileRow {
+    /* height: 65vh !important; */
+}
+
+.ChatMessageWindow {
+    /* height: 10rem; */
+    background-color: #ffffff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* position: absolute; */
+    width: 100%;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+.ChatMessageForm {
+    /* justify-content: flex-end; */
+    margin-top: auto;
+    /* position: absolute; */
+    width: 100%;
+    /* bottom: 0; */
+}
+
+
+
+
+.Card {
+    background-color: #e74c3c;
+    border-radius: 5px;
+    opacity: 0.90;
+  
+    font-weight: 700;
+    text-shadow: .2px .1px;
+    font-size: 18px;
+    
+  }
+  
+  .CardHeader {
+    background-color: #f7f3f3;
+  }

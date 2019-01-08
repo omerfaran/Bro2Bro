@@ -1,0 +1,147 @@
+.containerRed {
+    background-color: #D63031;
+    color: #ffffff;
+    height: auto;
+    width: 100%;
+    /* border-radius: 5px; */
+    /* padding:10px; */
+    /* bottom: 48px; */
+    /* z-index:50; */
+    /* border-top: 1px solid #eeeeee; */
+}
+
+.containerRed  p {
+    font-style: italic;
+}
+
+.Box {
+    padding: 10px;
+    /* box-sizing: border-box; */
+    padding-bottom:30px;
+    padding-top: 30px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.Title {
+    padding: 10px;
+    border-bottom: 1px solid #eeeeee;
+    border-top: 1px solid #eeeeee;
+}
+
+.Box:hover {
+    background-color: #cc2c2c;
+}
+
+.Button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.Seperator {
+    margin-bottom: 1.8rem;
+}
+
+.CheckboxContainer input {
+    display: none;
+}
+
+.CheckboxContainer {
+    display: inline-block;
+    /* padding-left: 30px; */
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.Checkmark {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #cccccc;
+    position: absolute;
+    left: 0;
+    top: 24%;
+    border-radius: 3px; 
+    transition: all .1s ease-in;
+}
+
+.CheckboxContainer input:checked + .Checkmark {
+    background-color: rgb(26, 184, 34); 
+    transition: all .17s ease-in;
+    
+}
+
+.CheckboxContainer p {
+    /* position: relative;
+    left: 20px; */
+    margin:0;
+    margin-left: 40px;
+    margin-top:10px;
+    /* padding-top:20px; */
+    padding:0;
+    /* margin-left: 5px; */
+}
+
+.CheckboxContainer:hover .Checkmark {
+    background-color: #c5c5c5d2;
+}
+
+.CheckboxContainer input:checked + .Checkmark:after {
+    content: '';
+    position: absolute;
+    height: 9px;
+    width: 12px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    top: 45%;
+    left: 55%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* .Age > p {
+    padding-right: 30px;
+    padding-left: 30px;
+} */
+
+
+/* .Age {
+    margin-top: 9px;
+}
+.Age > * {
+    padding: 0 10px;
+} */
+/* 
+.Age > .TextBox {
+    width: 4.7rem;
+    height: 30px;
+}
+
+.Age p {
+    font-size: 1.1rem;
+}
+
+.Wrapper {
+    position: relative;
+    width: 25%;
+}
+
+
+
+.Padding > * {
+    padding: 0.8rem;
+}
+
+
+.FilterHeadings {
+    font-size: 1.4rem;
+}
+
+.LocationPadding {
+    padding-right: 0.2rem;
+}
+
+
+
+
+ */

@@ -1,0 +1,479 @@
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+hr {
+    padding: 0;
+    margin: 0;
+    height: 0;
+    background-color: #D63031;
+}
+
+
+
+.Logo {
+    width: 250px;
+    height: 70px;
+    padding-left: 50px;
+}
+
+.Header {
+    left:0;
+    top:0;
+    background-color: #d63031;
+    text-align: center;
+    position: fixed;   
+    width: 100%;
+    height: 80px;
+    z-index: 10;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background-color: #d63031;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+.navToggle {
+    display: none;
+}
+
+.navToggleLabel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navToggleLabel span,
+.navToggleLabel span::before,
+.navToggleLabel span::after {
+    display: block;
+    background-color: white;
+    height: 1px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.navToggleLabel span::before,
+.navToggleLabel span::after {
+    content:' ';
+    position: absolute;
+}
+
+.navToggleLabel span::before {
+    height: 1.3px;
+    bottom: 7px;
+}
+
+.navToggleLabel span::after {
+    top: 7px;
+    height: 1.3px;
+}
+
+.NotificationsWidth, .Notifications {
+    width: 100vw; /* in hamburger mode width of notifcations is full width */
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 1em;
+    padding-bottom: 12px;
+    
+}
+
+
+nav li .Messages {
+    width: 100vw;
+    margin-left: -1em;
+    padding: 0;
+    padding-bottom: 20px;
+}
+
+
+.NotificationLi {
+    width: 400px !important;
+}
+
+nav a, .DropDown a {
+    color: rgba(255,255,255,.5);
+    text-decoration: none;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+    font-size: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 500;
+    transition: background-color .1s ease-in;
+    width: 100%
+}
+
+
+nav > ul > li:hover .DropDown  {
+    opacity:1;
+    display: inline-block;
+    visibility: visible;
+    padding-top: 10px;
+    position: static;
+}
+
+
+.DropDown a {
+    padding: 10px;
+}
+
+.DropDown {
+    display: none;
+}
+
+nav a:hover {
+    color: #F2CACA;
+    text-decoration: none;
+}
+
+
+.navToggle:checked ~ nav {
+  transform: scale(1,1)
+}
+
+.navToggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+.NotificationsWidth {
+    position: relative;
+}
+
+.NotificationsScroller {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 24rem;
+}
+
+
+.Profile {
+    position: relative;
+}
+
+.ProfileDropdown {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    left: 3rem;
+    width: 600px;
+}
+
+nav > ul > .ProfileDrop:hover .DropDown {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    left: 3rem;
+}
+
+@media screen and (max-width:400px) {
+    .ProfileDropdown li {
+        font-size: .4rem;
+    }
+}
+
+
+@media screen and (min-width:1100px) {
+    .Notifications {
+        width: 150px !important;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    nav > ul > .Notifications:hover .DropDown,
+nav > ul > li:hover .DropDown  {
+    opacity:1;
+    display: inline-block;
+    visibility: visible;
+    padding-top: 10px;
+    position: static;
+}
+
+nav > ul > .ProfileDrop:hover .DropDown {
+    display: inline-block;
+    position: static;
+}
+    .Notifications {
+        width: 50px;
+    }
+    .ProfileDropdown {
+        all: unset;
+    }
+    hr {
+        margin: 0px;
+        padding: 0;
+    }
+    nav li .Messages {
+        margin-left: 0;
+        padding-bottom: 0;
+    }
+    .navToggleLabel {
+        display: none;
+    }
+    .Header {
+        display: grid;
+        grid-template-columns: 3fr auto minmax(600px, 3fr) 1fr;
+    }
+    .NotificationsWidth {
+        width: 100%;
+        width: 390px !important;
+    }
+
+
+    .DropDown > li  {
+        width: 390px !important;
+    }
+
+    nav {
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+        align-items: center;
+        position: absolute;
+    }
+    nav li {
+        margin-bottom: 0;
+        height: 100%;
+        padding-bottom: 0;
+    }
+    nav a {
+        display: flex;
+        align-items: center;
+        opacity: 1;
+        height: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 140%;
+        box-sizing: border-box;  
+    }
+
+    nav a:hover {
+        background-color: #cc2c2c;
+    }
+ 
+    nav a:hover ~ hr {
+        background-color: #cc2c2c;
+    }
+    
+
+    nav .Inbox {
+        justify-content: center;
+    }
+
+    .DropDown {
+        position: absolute;
+        left:0;
+        background-color: #d63031;
+        height: 3.5rem;
+    }
+
+
+    .DropDown li {
+        all: unset;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        background-color: #d63031;
+    }
+    .DropDown a {
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+        opacity: 1;
+    }
+    
+    .DropDown {
+        padding-top:0 !important;
+        opacity: 0;
+        display: none;
+        transition: opacity 120ms ease-in;
+    }
+}
+
+nav .ProfileImage {
+   width: 3.5rem;
+   height: 3.5rem;
+   border-radius: 50%;
+}
+
+
+
+
+
+
+
+.navbar-custom {
+    background-color:#d63031;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.nav-item {
+    height: 100%;
+}
+.nav-item a {
+    height:100%;
+    background-color: #d63031;
+    transition: background-color .1s ease-in;
+}
+
+.divi {
+    height: 100%;
+}
+
+.aLink {
+    height: 100%;
+}
+
+.nav-item a:hover {
+    background-color: #cc2c2c;
+}
+
+.ulRow {
+    height: 100%;
+}
+
+.ProfileImage {
+    height: 10%;
+    width: 10%;
+}
+
+.NotificationImage {
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   margin-right: 12px;
+   padding: 10px;
+   box-sizing: content-box
+}
+
+.Message {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.Message .MessageName {
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+.Message .MessageContent {
+    font-size: 0.85rem;
+}
+
+.Message .MessageTimestamp {
+    font-weight: 200;
+    font-size: 0.7rem;
+    left: 50%;
+    position: absolute;
+}
+
+.faRotate {
+    margin-right: 8px;
+    font-size: 0.7rem;
+    color: rgb(110, 110, 110);
+}
+
+.faBirthday {
+    margin-right: 8px;
+    font-size: 0.7rem;
+    color: #fdcb6e;
+}
+
+.Count {
+    background-color: #6c5ce7;
+    padding: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-align: center;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-weight: bold;
+    position: relative;
+    right: 0.4rem;
+    bottom: 0.5rem;
+
+    animation: countAnimation 0.5s ease-out;
+}
+
+.BrowseBros:hover .faBeer {
+    animation: toast 1s ease-out;
+    color: #f1c40f;
+}
+
+.Backgrounds {
+    color: #2c3e50
+}
+
+
+@keyframes countAnimation {
+    0% {
+        transform: translate(0, -30%)
+    }
+    30% {
+        transform: translate(0, 0);
+        transform: scale(1.5)
+    }
+    70% {
+        transform: translate(0, -15%);
+        transform: scale(1.2)
+    }
+    100% {
+        transform: translate(0, 0);
+        transform: scale(0.8)
+    }
+
+}
+
+@keyframes toast {
+    0% {
+        transform: translate(0, -30%)
+    }
+    30% {
+        transform: translate(0, -40%);
+    }
+    70% {
+        transform: translate(0, -50%);
+    }
+    80% {
+        transform: translate(0, -30%);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+
+}

@@ -1,0 +1,29 @@
+{
+  "name"        : "Component",
+  "description" : "Component distribution",
+  "homepage"    : "https://www.semantic-ui.com",
+  "author": {
+    "name" : "Jack Lukic",
+    "web"  : "https://www.jacklukic.com"
+  },
+  "ignore": [
+    "./index.js"
+  ],
+  "keywords": [
+    "semantic",
+    "ui",
+    "css3",
+    "framework"
+  ],
+  "license" : [
+    "https://semantic-ui.mit-license.org/"
+  ],
+  "ignore": [
+    "docs",
+    "node",
+    "server",
+    "spec",
+    "src",
+    "test"
+  ]
+}

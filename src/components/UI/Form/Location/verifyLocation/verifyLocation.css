@@ -1,0 +1,66 @@
+.LocationHelperNormal > span, .LocationHelperPosition > span {
+    position: absolute;
+    bottom: 100%;
+    padding:0;
+    margin: 0;
+    margin-bottom: 4px;
+    display: flex;
+    flex-flow: column;
+    display: inline-block;
+    animation: checkAnimation 0.8s ease-out;
+}
+
+.LocationHelperPosition > span {
+    left: calc(75px);
+    display: inline;
+    /* width:200%; */
+    /* width: 100%; */
+    bottom: 115%;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #11568b;
+}
+
+.LocationHelperNormal > span p, .LocationHelperPosition > span p {
+    padding:0;
+    margin:0;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.IconTrue {
+    color: rgb(25, 160, 25);
+}
+
+.IconFalse {
+    animation: questionAnimation 2s ease-out;
+    color: #8ca4ad;
+}
+
+@keyframes questionAnimation {
+    0% {
+        transform: translate(0, -25%)
+    }
+    30% {
+        transform: translate(0, 0)
+    }
+    70% {
+        transform: translate(0, -15%)
+    }
+    100% {
+        transform: translate(0, 0)
+    }
+
+}
+
+@keyframes checkAnimation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

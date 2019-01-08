@@ -1,0 +1,18 @@
+.Input {
+    box-shadow: none !important;
+    min-width: 210px;
+}
+
+.InputTotal {
+    text-align: left;
+    /* padding-right: 18px; */
+    padding-right: 18px;
+    box-sizing: border-box;
+
+}
+
+.Error {
+    color: red;
+    font-size: 0.8rem;
+    top: 5px;
+}

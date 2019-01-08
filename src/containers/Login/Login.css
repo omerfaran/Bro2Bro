@@ -1,0 +1,104 @@
+.Wrapper {
+    background-image: url('../../assets/images/login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.BroComplete, .BroLeft, .BroRight {
+    height: 150px;
+}
+.BroComplete {
+    position: absolute;
+}
+
+.Iframe {
+    z-index: 1;
+    min-height: 459px; /* coreesponds to register form height to keep that height on switching to login form*/
+}
+
+@media screen and (max-width:767px) {
+    .Iframe {
+        height: 240px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .BroComplete {
+        width: 380px;
+    }
+}
+
+@media screen and (max-width:779px) {
+    .BroLeft, .BroRight {
+        display: none;
+    }
+    .BroComplete {
+        position: static;
+    }
+}
+
+
+@media screen and (min-width: 780px) {
+    
+.BroLeft {
+    animation: broLeft 0.8s;
+    opacity: 0;
+}
+
+.BroRight {
+    margin-left: 15px;
+    animation: broRight 0.8s;
+    opacity: 0;
+}
+
+.BroComplete {
+    animation: broComplete 1.6s ease-out  ;
+}
+
+@keyframes broLeft {
+    0% {
+        opacity: 1;
+        transform:translateX(-40%);
+    }
+    99% {
+        opacity: 1;
+    }
+    99% {
+        transorm:translateX(-5%);
+        opacity: 0;
+    }
+}
+
+@keyframes broRight {
+    0% {
+        opacity: 1;
+        transform:translateX(40%);
+    }
+    99% {
+        opacity: 1;
+    }
+    99% {
+        transorm:translateX(5%);
+        opacity: 0;
+    }
+}
+
+@keyframes broComplete {
+    0% {
+        opacity: 0;
+    }
+    45% {
+        opacity: 1;
+    }
+    91% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+} 

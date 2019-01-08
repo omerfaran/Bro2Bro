@@ -1,0 +1,47 @@
+.Background {
+    display: inline-block;
+    position: relative;
+    opacity: 0.95;
+    transition: all .2s ease-out;
+
+    /* Fix css bug on transition */
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    transform: translateZ(0);
+}
+.Background img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+
+}
+
+.Background:hover {
+    cursor: pointer;
+    opacity: 1;
+    transform:scale(1.1, 1.1)
+}
+
+.Background:hover .faDelete {
+    opacity: 1;
+}
+
+.faDelete {
+    color: #e74c3c;
+    font-size: 2.2rem;
+    font-weight: bold;
+    position: absolute;
+    top: -2.2rem;
+    right: 1.8rem;
+    opacity: 0;
+}
+
+@media (min-width: 1200px) {
+    .MainMargins {
+        margin-top: 40px;
+        margin-bottom: 60px !important;
+    }
+}
